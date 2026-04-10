@@ -5,6 +5,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3331:3000"
+    environment:
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
     volumes:
       - hypothese-tracker-data:/app/data
     restart: unless-stopped
