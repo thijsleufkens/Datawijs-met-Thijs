@@ -13,7 +13,7 @@ RUN npm ci
 # Prisma genereren
 COPY prisma ./prisma
 COPY prisma.config.ts ./
-COPY .env ./
+COPY .env.example .env
 RUN npx prisma generate
 
 # Bouwen
@@ -39,13 +39,15 @@ COPY --from=builder /app/public ./public
 
 # Kopieer Prisma bestanden voor migraties en seed
 COPY --from=builder /app/prisma ./prisma
-COPY --from=builder /app/prisma.config.ts ./prisma.config.ts
-COPY --from=builder /app/.env ./.env
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 COPY --from=builder /app/node_modules/better-sqlite3 ./node_modules/better-sqlite3
-COPY --from=builder /app/node_modules/@prisma/adapter-better-sqlite3 ./node_modules/@prisma/adapter-better-sqlite3
+COPY --from=builder /app/node_modules/bindings ./node_modules/bindings
+COPY --from=builder /app/node_modules/file-uri-to-path ./node_modules/file-uri-to-path
 COPY --from=builder /app/node_modules/dotenv ./node_modules/dotenv
+
+# Entrypoint-script voor database-initialisatie bij opstarten
+COPY --from=builder /app/entrypoint.sh ./entrypoint.sh
 
 # Data directory voor SQLite en uploads
 RUN mkdir -p /app/data/uploads && chown -R nextjs:nodejs /app/data
@@ -57,4 +59,4 @@ EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["node", "server.js"]
+CMD ["sh", "entrypoint.sh"]
