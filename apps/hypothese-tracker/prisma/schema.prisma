@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Besluit {
+  id              String   @id @default(cuid())
+  titel           String
+  datumBesluit    DateTime @default(now())
+  actie           String
+  hypothese       String
+  reviewdatum     DateTime
+  status          String   @default("open") // "open" | "gereviewd"
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  kpiLabels       BesluitKpi[]
+  screenshots     Screenshot[]
+  review          Review?
+}
+
+model Review {
+  id                  String   @id @default(cuid())
+  oordeel             String   // "ja" | "deels" | "nee"
+  geleerd             String
+  reviewdatumWerkelijk DateTime @default(now())
+  createdAt           DateTime @default(now())
+
+  besluitId           String   @unique
+  besluit             Besluit  @relation(fields: [besluitId], references: [id], onDelete: Cascade)
+  screenshots         Screenshot[]
+}
+
+model Screenshot {
+  id        String   @id @default(cuid())
+  filename  String
+  type      String   // "nulmeting" | "review"
+  createdAt DateTime @default(now())
+
+  besluitId String?
+  besluit   Besluit? @relation(fields: [besluitId], references: [id], onDelete: Cascade)
+  reviewId  String?
+  review    Review?  @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+}
+
+model Kpi {
+  id        String       @id @default(cuid())
+  naam      String       @unique
+  createdAt DateTime     @default(now())
+
+  besluiten BesluitKpi[]
+}
+
+model BesluitKpi {
+  besluitId String
+  kpiId     String
+  besluit   Besluit @relation(fields: [besluitId], references: [id], onDelete: Cascade)
+  kpi       Kpi     @relation(fields: [kpiId], references: [id], onDelete: Cascade)
+
+  @@id([besluitId, kpiId])
+}

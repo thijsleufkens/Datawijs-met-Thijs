@@ -1,0 +1,13 @@
+services:
+  hypothese-tracker:
+    build:
+      context: ./apps/hypothese-tracker
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - hypothese-tracker-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  hypothese-tracker-data:
