@@ -95,9 +95,15 @@ const inputKlassen =
   "w-full rounded-lg border border-[var(--color-border)] px-3 py-2.5 text-sm bg-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20 focus:border-[var(--color-accent)] placeholder:text-[var(--color-muted)] transition-colors";
 
 export function Invoerveld({
+  className,
   ...props
 }: React.InputHTMLAttributes<HTMLInputElement>) {
-  return <input className={inputKlassen} {...props} />;
+  return (
+    <input
+      className={className ? `${inputKlassen} ${className}` : inputKlassen}
+      {...props}
+    />
+  );
 }
 
 export function Tekstvak({

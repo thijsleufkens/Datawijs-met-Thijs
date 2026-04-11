@@ -10,58 +10,48 @@ import {
   Invoerveld,
 } from "@/components/wizard-shell";
 
+function isNietInLijst<T extends readonly string[]>(
+  waarde: string,
+  lijst: T
+): boolean {
+  return waarde !== "" && !lijst.includes(waarde as T[number]);
+}
+
 export default function KaraktersPagina() {
   const { draft, setKarakters } = usePovStore();
   const { karakters } = draft;
 
-  const [heldAnders, setHeldAnders] = useState(
-    !HELDEN.includes(karakters.held as (typeof HELDEN)[number]) &&
-      karakters.held !== ""
-      ? karakters.held
-      : ""
+  // Initialiseer "anders"-staat op basis van opgeslagen waarde
+  const [heldIsAnders, setHeldIsAnders] = useState(
+    isNietInLijst(karakters.held, HELDEN)
   );
-  const [tegenstanaderAnders, setTegenstanaderAnders] = useState(
-    !TEGENSTANDERS.includes(
-      karakters.tegenstander as (typeof TEGENSTANDERS)[number]
-    ) && karakters.tegenstander !== ""
-      ? karakters.tegenstander
-      : ""
+  const [tegenstanderIsAnders, setTegenstanderIsAnders] = useState(
+    isNietInLijst(karakters.tegenstander, TEGENSTANDERS)
   );
 
-  const heldSelectWaarde =
-    heldAnders !== "" ||
-    (!HELDEN.includes(karakters.held as (typeof HELDEN)[number]) &&
-      karakters.held !== "")
-      ? "anders"
-      : karakters.held;
-
-  const tegenstanaderSelectWaarde =
-    tegenstanaderAnders !== "" ||
-    (!TEGENSTANDERS.includes(
-      karakters.tegenstander as (typeof TEGENSTANDERS)[number]
-    ) &&
-      karakters.tegenstander !== "")
-      ? "anders"
-      : karakters.tegenstander;
+  const heldSelectWaarde = heldIsAnders ? "anders" : karakters.held;
+  const tegenstanderSelectWaarde = tegenstanderIsAnders
+    ? "anders"
+    : karakters.tegenstander;
 
   const isVolledig = !!(karakters.held && karakters.tegenstander);
 
   function handleHeldChange(waarde: string) {
     if (waarde === "anders") {
-      setHeldAnders("");
+      setHeldIsAnders(true);
       setKarakters({ held: "" });
     } else {
-      setHeldAnders("");
+      setHeldIsAnders(false);
       setKarakters({ held: waarde });
     }
   }
 
-  function handleTegenstanaderChange(waarde: string) {
+  function handleTegenstanderChange(waarde: string) {
     if (waarde === "anders") {
-      setTegenstanaderAnders("");
+      setTegenstanderIsAnders(true);
       setKarakters({ tegenstander: "" });
     } else {
-      setTegenstanaderAnders("");
+      setTegenstanderIsAnders(false);
       setKarakters({ tegenstander: waarde });
     }
   }
@@ -86,14 +76,11 @@ export default function KaraktersPagina() {
             </option>
           ))}
         </Keuzelijst>
-        {heldSelectWaarde === "anders" && (
+        {heldIsAnders && (
           <Invoerveld
             className="mt-2"
-            value={heldAnders}
-            onChange={(e) => {
-              setHeldAnders(e.target.value);
-              setKarakters({ held: e.target.value });
-            }}
+            value={karakters.held}
+            onChange={(e) => setKarakters({ held: e.target.value })}
             placeholder="bijv. kwaliteitscontroleur"
             autoFocus
           />
@@ -102,8 +89,8 @@ export default function KaraktersPagina() {
 
       <FormVeld label="De tegenstander — wat staat de held in de weg?">
         <Keuzelijst
-          value={tegenstanaderSelectWaarde}
-          onChange={(e) => handleTegenstanaderChange(e.target.value)}
+          value={tegenstanderSelectWaarde}
+          onChange={(e) => handleTegenstanderChange(e.target.value)}
         >
           <option value="">Kies een oorzaak...</option>
           {TEGENSTANDERS.map((t) => (
@@ -112,14 +99,11 @@ export default function KaraktersPagina() {
             </option>
           ))}
         </Keuzelijst>
-        {tegenstanaderSelectWaarde === "anders" && (
+        {tegenstanderIsAnders && (
           <Invoerveld
             className="mt-2"
-            value={tegenstanaderAnders}
-            onChange={(e) => {
-              setTegenstanaderAnders(e.target.value);
-              setKarakters({ tegenstander: e.target.value });
-            }}
+            value={karakters.tegenstander}
+            onChange={(e) => setKarakters({ tegenstander: e.target.value })}
             placeholder="bijv. ontbrekende meetdata"
             autoFocus
           />
@@ -127,11 +111,13 @@ export default function KaraktersPagina() {
       </FormVeld>
 
       <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-4 text-sm text-[var(--color-muted)]">
-        <p className="font-medium text-[var(--color-foreground)] mb-1">Waarom deze vraag?</p>
+        <p className="font-medium text-[var(--color-foreground)] mb-1">
+          Waarom deze vraag?
+        </p>
         <p>
           Abstracte cijfers krijgen urgentie als ze aan mensen worden gekoppeld.
-          De held maakt duidelijk wie last heeft van de afwijking; de tegenstander
-          geeft richting aan de oplossing.
+          De held maakt duidelijk wie last heeft van de afwijking; de
+          tegenstander geeft richting aan de oplossing.
         </p>
       </div>
 

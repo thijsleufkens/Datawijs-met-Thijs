@@ -64,7 +64,7 @@ const voorbeeldDraft: PovDraft = {
       "Al drie weken op rij onder target, vooral in de ochtendploeg.",
   },
   karakters: {
-    held: "operators",
+    held: "operator",
     tegenstander: "verouderd systeem",
   },
   actie: {
