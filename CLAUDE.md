@@ -101,3 +101,5 @@ Bij twijfel over de stack: stel een voorstel met motivatie voor (max 1 A4) en wa
 5. Vraag door als iets onduidelijk is, raad niet
 6. Schrijf commit messages in het Nederlands, beschrijvend maar beknopt
 7. Update de app-README en het leerlogboek (`docs/leerlogboek.md`) als er iets noemenswaardigs gebeurt
+8. Als je een Dockerfile schrijft: voeg `RUN mkdir -p /app/public` toe in de builder-stage vóór de build. Lege mappen worden niet door Git getrackt en bestaan dan niet in de Docker build-context, wat een cryptische COPY-fout geeft. Voeg ook de nieuwe app toe aan de root `docker-compose.yml`.
+9. Verifieer Docker-builds lokaal met `docker compose build` voordat je commit.

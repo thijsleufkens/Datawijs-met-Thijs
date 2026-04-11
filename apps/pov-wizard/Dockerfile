@@ -12,6 +12,8 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# Zorg dat public altijd bestaat, ook als de map leeg is en niet in Git staat
+RUN mkdir -p /app/public
 RUN npm run build
 
 # Productie-image

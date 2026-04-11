@@ -1,4 +1,12 @@
 services:
+  pov-wizard:
+    build:
+      context: ./apps/pov-wizard
+      dockerfile: Dockerfile
+    ports:
+      - "3334:3000"
+    restart: unless-stopped
+
   hypothese-tracker:
     build:
       context: ./apps/hypothese-tracker
