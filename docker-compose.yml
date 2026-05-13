@@ -20,13 +20,5 @@ services:
       - hypothese-tracker-data:/app/data
     restart: unless-stopped
 
-  patroon-atlas:
-    build:
-      context: ./apps/patroon-atlas
-      dockerfile: Dockerfile
-    ports:
-      - "3335:3000"
-    restart: unless-stopped
-
 volumes:
   hypothese-tracker-data:

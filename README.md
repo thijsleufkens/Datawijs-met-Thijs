@@ -16,7 +16,7 @@ Het overkoepelende werknaam-concept is *Decision OS*: een schil rond Power BI-da
 |---|---|---|
 | [hypothese-tracker](apps/hypothese-tracker/) | Logt besluiten met hypothese en nulmeting, en helpt later kijken of het klopte | In ontwikkeling |
 | [pov-wizard](apps/pov-wizard/) | Vijf-stappenflow om van een dashboard-anomalie naar een scherpe one-liner te komen | In ontwikkeling |
-| [patroon-atlas](apps/patroon-atlas/) | Galerij van scatterplots over een fictieve machinebouwer — demo van wat scatterplots ontsluiten dat operationele dashboards niet laten zien | In ontwikkeling |
+| [patroon-atlas](apps/patroon-atlas/) | Statische galerij van scatterplots over een fictieve machinebouwer — demo van wat scatterplots ontsluiten dat operationele dashboards niet laten zien | In ontwikkeling |
 
 Meer volgt naarmate ideeën uit mijn werk concreet genoeg worden om te bouwen.
 
