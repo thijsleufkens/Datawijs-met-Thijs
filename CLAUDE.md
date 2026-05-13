@@ -58,7 +58,11 @@ Vuistregel: als je twijfelt of een feature erbij moet, is het antwoord nee.
 
 ## Demo-data
 
-Alle appjes moeten gedemonstreerd kunnen worden zonder leeg te ogen. Verzin een fictief maakbedrijf en gebruik dat consistent door alle appjes heen. Voorstel: **Van Houten Metaal**, een fictief familiebedrijf in Eindhoven dat metaalbewerking doet voor de machinebouw, ~120 medewerkers. Gebruik fictieve productnamen (bijv. "Frame Type 7", "Bracket A12"), fictieve KPI's met realistische waardes, en fictieve namen voor mensen ("Peter de Vries", "Anja Hendriks").
+Alle appjes moeten gedemonstreerd kunnen worden zonder leeg te ogen. Voor nieuwe apps gebruiken we **Korver Machinebouw**, een fictief familiebedrijf in Helmond dat special machines bouwt voor de voedingsmiddelenindustrie, ~120 medewerkers. Project-organisatie met engineering, assemblage en inbedrijfstelling als hoofdfasen.
+
+Gebruik fictieve project- en machinenamen (bijv. "K2024-117", "Vulstation M40", "Sleevemachine S22"), fictieve KPI's met realistische waardes, en fictieve namen voor mensen ("Peter de Vries", "Anja Hendriks").
+
+De eerste twee apps (hypothese-tracker, pov-wizard) zijn nog rond een eerdere demo-context (Van Houten Metaal, metaalbewerking) gebouwd; die laten we ongemoeid. Bij nieuwe content geldt Korver.
 
 Geen echte klantnamen, geen echte cijfers, geen herkenbare details uit Thijs' werkervaring.
 

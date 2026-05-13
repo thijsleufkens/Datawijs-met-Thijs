@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand palet — overgenomen uit bvbv-canvas/tokens.css */
+  --color-amber: #F2B969;
+  --color-amber-50: #FBEBC9;
+  --color-amber-100: #F8DDA8;
+  --color-amber-300: #F2B969;
+  --color-amber-500: #C98634;
+  --color-amber-700: #6E4614;
+
+  --color-ink: #1D0C0C;
+  --color-ink-700: #3A2726;
+  --color-slate: #727272;
+  --color-ink-300: #B8B0AC;
+  --color-ink-100: #E8E1D8;
+  --color-ink-50: #F3ECE0;
+
+  --color-cream: #FDF8F0;
+  --color-white: #FFFFFF;
+
+  --color-border-subtle: #EDE4D3;
+  --color-border-default: #DCD1BC;
+
+  --color-signal-positive: #3F7D4E;
+  --color-signal-warning: #C98634;
+  --color-signal-negative: #A2382B;
+  --color-signal-info: #3A6B85;
+
+  /* Semantische aliasen */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-ink);
+  --color-muted: var(--color-slate);
+  --color-subtle: var(--color-ink-300);
+  --color-border: var(--color-border-default);
+  --color-surface: var(--color-white);
+  --color-accent: var(--color-amber);
+
+  --font-sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+html {
+  background: var(--color-cream);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
