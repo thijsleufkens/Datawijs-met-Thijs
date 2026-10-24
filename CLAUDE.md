@@ -10,7 +10,7 @@ Geen producten, geen startup. Experimenten met richting. Bedoeld als gesprekstof
 
 ## Wie de bouwer is
 
-Thijs Leufkens, solo BI-consultant in Venlo. 15+ jaar ervaring als senior data/BI specialist (SAP, Dynamics, Power BI, SQL, DAX, Power Query, Kimball-modellering). Achtergrond in productieplanning bij ASML, daarna consulting bij maakbedrijven (Marel, Uniper, IXON, DAF). Positioneert zichzelf als *de tolk tussen techniek en bedrijfskunde*. Minder ervaring met moderne webframeworks, maar leert snel.
+Thijs Leufkens, data- en BI-specialist. 15+ jaar ervaring als senior data/BI specialist (SAP, Dynamics, Power BI, SQL, DAX, Power Query, Kimball-modellering). Achtergrond in productieplanning bij ASML, daarna consulting bij maakbedrijven (Marel, Uniper, IXON, DAF). Positioneert zichzelf als *de tolk tussen techniek en bedrijfskunde*.
 
 ## Doelgroep van de appjes
 
