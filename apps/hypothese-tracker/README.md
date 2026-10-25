@@ -42,6 +42,12 @@ docker compose up --build
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Live demo (Strongbad)
+
+`https://hypothese.datawijs.nl`, achter een NPM-login (account in `~/.config/strongbad/hypothese-demo.env` op de VPS).
+Deployen: `./deploy.sh` (shipt de bron naar `/opt/strongbad/hypothese-tracker/app` en bouwt daar; data blijft in `data/`).
+De NPM-host en access-list zijn eenmalig gemaakt met `strongbad/setup_npm.py`.
+
 ## Demo-data
 
 De seed bevat 5 voorbeeldbesluiten van het fictieve bedrijf Van Houten Metaal:
