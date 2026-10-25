@@ -1,0 +1,15 @@
+# POV Wizard op Strongbad (pov.datawijs.nl via NPM, achter access-list
+# "hypothese-demo"). Bron = ./app, neergezet door ../deploy.sh.
+# Poort alleen op loopback + container-IP; nooit kaal publiceren (publiek IPv6!).
+# Geen volume: de app is volledig client-side, state leeft in de browser.
+services:
+  web:
+    build: ./app
+    container_name: pov-wizard
+    ports:
+      - "127.0.0.1:8907:3000"
+      - "10.100.0.171:8907:3000"
+    environment:
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+    restart: unless-stopped

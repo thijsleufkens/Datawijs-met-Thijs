@@ -25,6 +25,12 @@ npm run dev
 
 Open <http://localhost:3000>.
 
+## Live demo (Strongbad)
+
+`https://pov.datawijs.nl`, achter dezelfde NPM-login als de hypothese-tracker (access-list `hypothese-demo`).
+Deployen: `./deploy.sh` (shipt de bron naar `/opt/strongbad/pov-wizard/app` en bouwt daar).
+De NPM-host is eenmalig gemaakt met `strongbad/setup_npm.py`.
+
 ## Demo
 
 Klik op de landingspagina op **Vul voorbeeld in** om een scenario te zien van Van Houten Metaal, een fictief metaalbewerkingsbedrijf.
