@@ -4,7 +4,7 @@ Per appje één paragraaf: wat wilde ik testen, wat heb ik gebouwd, wat vonden m
 
 ## Hypothese-tracker
 
-*Status: eerste werkende versie*
+*Status: live op hypothese.datawijs.nl (achter basic auth)*
 
 **Wat ik wil testen:** of het expliciet vastleggen van een besluit met hypothese en nulmeting, en het later terughalen daarvan, leidt tot beter gesprek in een MT. Hypothese: ja, omdat het de cognitieve kosten van "waarom besloten we dit ook alweer" wegneemt en mensen dwingt scherp te zijn over verwachtingen.
 
@@ -12,7 +12,7 @@ Per appje één paragraaf: wat wilde ik testen, wat heb ik gebouwd, wat vonden m
 
 **Wat anderen ervan vonden:** —
 
-**Wat ik geleerd heb:** Prisma v7 is een flinke stap ten opzichte van v6 — de nieuwe `prisma-client` generator is ESM-only en vereist een driver adapter (better-sqlite3) in plaats van de ingebouwde engine. Kost even uitzoeken, maar werkt uiteindelijk goed. Next.js standalone output werkt prima met Docker.
+**Wat ik geleerd heb:** Prisma v7 is een flinke stap ten opzichte van v6 — de nieuwe `prisma-client` generator is ESM-only en vereist een driver adapter (better-sqlite3) in plaats van de ingebouwde engine. Kost even uitzoeken, maar werkt uiteindelijk goed. Next.js standalone output werkt prima met Docker. Een Docker-volume begint leeg: de eerste containerversie startte zonder tabellen en gaf alleen een generieke serverfout. Een entrypoint dat bij elke start de migraties toepast en zo nodig seedt, lost dat op. Les: eerst de hele containerflow testen, pas daarna deployen.
 
 ## POV Wizard
 
