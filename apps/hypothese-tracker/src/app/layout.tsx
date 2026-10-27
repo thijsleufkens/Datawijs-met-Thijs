@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Hypothese-tracker",
   description:
-    "Log besluiten met hypothese en nulmeting, en kijk later of het klopte.",
+    "Log besluiten met hypothese en nulmeting en kijk later of het klopte.",
 };
 
 export default function RootLayout({

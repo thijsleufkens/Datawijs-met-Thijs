@@ -9,7 +9,7 @@ Onderdeel van [datawijs-met-thijs](../../README.md).
 Je ziet iets geks in een KPI. In plaats van het weg te klikken of er alleen maar naar te staren, loopt deze wizard je langs vijf vragen:
 
 1. Wat zie je precies?
-1. Wie wordt hierdoor geraakt, en wat zit het in de weg?
+1. Wie wordt hierdoor geraakt en wat zit het in de weg?
 1. Wat stel je voor om te doen?
 1. Wat kost het als we niets doen?
 1. Zet het in één zin.
@@ -41,4 +41,4 @@ Next.js, TypeScript, Tailwind CSS v4, Zustand. Geen backend, geen database.
 
 ## Achtergrond
 
-De structuur komt uit Nancy Duarte's DataStory-methodiek, waarin een sterke Data POV bestaat uit een observatie, een actie, en de inzet. De wizard dwingt deze drie componenten af zonder dat de gebruiker het boek hoeft te lezen.
+De structuur komt uit Nancy Duarte's DataStory-methodiek, waarin een sterke Data POV bestaat uit een observatie, een actie en de inzet. De wizard dwingt deze drie componenten af zonder dat de gebruiker het boek hoeft te lezen.

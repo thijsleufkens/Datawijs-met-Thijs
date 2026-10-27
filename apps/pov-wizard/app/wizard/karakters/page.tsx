@@ -58,13 +58,13 @@ export default function KaraktersPagina() {
 
   return (
     <WizardShell
-      titel="Stap 2 — Karakters"
-      vraag="Wie of wat wordt hierdoor geraakt, en wat zit het in de weg?"
+      titel="Stap 2: Karakters"
+      vraag="Wie of wat wordt hierdoor geraakt en wat zit het in de weg?"
       terugHref="/wizard/observatie"
       verderHref="/wizard/actie"
       verderDisabled={!isVolledig}
     >
-      <FormVeld label="De held — wie ondervindt hier last van?">
+      <FormVeld label="De held: wie ondervindt hier last van?">
         <Keuzelijst
           value={heldSelectWaarde}
           onChange={(e) => handleHeldChange(e.target.value)}
@@ -87,7 +87,7 @@ export default function KaraktersPagina() {
         )}
       </FormVeld>
 
-      <FormVeld label="De tegenstander — wat staat de held in de weg?">
+      <FormVeld label="De tegenstander: wat staat de held in de weg?">
         <Keuzelijst
           value={tegenstanderSelectWaarde}
           onChange={(e) => handleTegenstanderChange(e.target.value)}

@@ -91,7 +91,7 @@ export default function NieuwBesluit() {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Actie — wat gaan we concreet doen?
+            Actie: wat gaan we concreet doen?
           </label>
           <textarea
             required

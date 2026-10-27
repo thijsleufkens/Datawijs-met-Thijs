@@ -2,7 +2,7 @@
 """Eenmalig: NPM proxy-host pov.datawijs.nl (+ cert), achter de bestaande
 access-list "hypothese-demo" zodat beide demo's dezelfde login delen.
 
-Leest NPM_URL/NPM_USER/NPM_PASS uit de env (~/.config/strongbad/npm.env).
+Leest NPM_URL/NPM_USER/NPM_PASS en CONTAINER_IP uit de env (~/.config/strongbad/npm.env).
 Idempotent: een bestaande host wordt hergebruikt, niet dubbel gemaakt.
 
 Gebruik (op de VPS):
@@ -14,16 +14,16 @@ import os
 import sys
 import urllib.request
 
-BASE = os.environ.get("NPM_URL", "https://npm.strongbad.nl")
-USER = os.environ.get("NPM_USER", "thijsleufkens@gmail.com")
+BASE = os.environ.get("NPM_URL")
+USER = os.environ.get("NPM_USER")
 PASS = os.environ.get("NPM_PASS")
 DOMAIN = "pov.datawijs.nl"
 ACL_NAME = "hypothese-demo"
-FWD_HOST = "10.100.0.171"
+FWD_HOST = os.environ.get("CONTAINER_IP")
 FWD_PORT = 8907
 
-if not PASS:
-    sys.exit("Zet NPM_PASS in de env (zie docstring)")
+if not (BASE and USER and PASS and FWD_HOST):
+    sys.exit("Zet NPM_URL, NPM_USER, NPM_PASS en CONTAINER_IP in de env (zie docstring)")
 
 
 def api(method, path, token=None, body=None):

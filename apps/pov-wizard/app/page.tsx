@@ -27,7 +27,7 @@ export default function LandingPagina() {
       <div className="mb-10 space-y-4">
         {[
           { nummer: 1, label: "Wat zie je precies?" },
-          { nummer: 2, label: "Wie wordt geraakt, en wat zit het in de weg?" },
+          { nummer: 2, label: "Wie wordt geraakt en wat zit het in de weg?" },
           { nummer: 3, label: "Wat stel je voor?" },
           { nummer: 4, label: "Wat kost het als we niets doen?" },
           { nummer: 5, label: "Zet het in één zin." },

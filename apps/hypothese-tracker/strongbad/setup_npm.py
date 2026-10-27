@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Eenmalig: NPM access-list "hypothese-demo" + proxy-host hypothese.datawijs.nl (+ cert).
 
-Leest NPM_URL/NPM_USER/NPM_PASS uit de env (~/.config/strongbad/npm.env) en de
+Leest NPM_URL/NPM_USER/NPM_PASS en CONTAINER_IP uit de env (~/.config/strongbad/npm.env) en de
 demo-login uit DEMO_USER/DEMO_PASS (~/.config/strongbad/hypothese-demo.env).
 Idempotent: bestaande access-list of host wordt hergebruikt, niet dubbel gemaakt.
 
@@ -14,18 +14,18 @@ import os
 import sys
 import urllib.request
 
-BASE = os.environ.get("NPM_URL", "https://npm.strongbad.nl")
-USER = os.environ.get("NPM_USER", "thijsleufkens@gmail.com")
+BASE = os.environ.get("NPM_URL")
+USER = os.environ.get("NPM_USER")
 PASS = os.environ.get("NPM_PASS")
 DEMO_USER = os.environ.get("DEMO_USER")
 DEMO_PASS = os.environ.get("DEMO_PASS")
 DOMAIN = "hypothese.datawijs.nl"
 ACL_NAME = "hypothese-demo"
-FWD_HOST = "10.100.0.171"
+FWD_HOST = os.environ.get("CONTAINER_IP")
 FWD_PORT = 8906
 
-if not (PASS and DEMO_USER and DEMO_PASS):
-    sys.exit("Zet NPM_PASS, DEMO_USER en DEMO_PASS in de env (zie docstring)")
+if not (BASE and USER and PASS and FWD_HOST and DEMO_USER and DEMO_PASS):
+    sys.exit("Zet NPM_URL, NPM_USER, NPM_PASS, CONTAINER_IP, DEMO_USER en DEMO_PASS in de env (zie docstring)")
 
 
 def api(method, path, token=None, body=None):

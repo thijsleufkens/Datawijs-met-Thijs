@@ -17,7 +17,7 @@ export default function ActiePagina() {
 
   return (
     <WizardShell
-      titel="Stap 3 — Actie"
+      titel="Stap 3: Actie"
       vraag="Wat is je aanbeveling?"
       terugHref="/wizard/karakters"
       verderHref="/wizard/inzet"
@@ -37,7 +37,7 @@ export default function ActiePagina() {
         </Keuzelijst>
       </FormVeld>
 
-      <FormVeld label="Object — wat precies?">
+      <FormVeld label="Object: wat precies?">
         <Invoerveld
           value={actie.object}
           onChange={(e) => setActie({ object: e.target.value })}

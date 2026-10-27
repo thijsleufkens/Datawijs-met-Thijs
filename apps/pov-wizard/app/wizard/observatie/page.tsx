@@ -21,8 +21,8 @@ export default function ObservatiePagina() {
 
   return (
     <WizardShell
-      titel="Stap 1 — Observatie"
-      vraag="Welke afwijking zie je, en in welke context?"
+      titel="Stap 1: Observatie"
+      vraag="Welke afwijking zie je en in welke context?"
       terugHref="/"
       verderHref="/wizard/karakters"
       verderDisabled={!isVolledig}

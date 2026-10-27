@@ -7,7 +7,7 @@ services:
     container_name: hypothese-tracker
     ports:
       - "127.0.0.1:8906:3000"
-      - "10.100.0.171:8906:3000"
+      - "${CONTAINER_IP:?zet CONTAINER_IP}:8906:3000"   # deploy.sh geeft CONTAINER_IP mee
     environment:
       - HOSTNAME=0.0.0.0
       - PORT=3000

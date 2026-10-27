@@ -18,7 +18,7 @@ export default function InzetPagina() {
 
   return (
     <WizardShell
-      titel="Stap 4 — Inzet"
+      titel="Stap 4: Inzet"
       vraag="Wat gebeurt er als we niets doen?"
       terugHref="/wizard/actie"
       verderHref="/wizard/synthese"
@@ -74,7 +74,7 @@ export default function InzetPagina() {
         <p className="font-medium text-[var(--color-foreground)] mb-1">Waarom de inzet?</p>
         <p>
           Zonder inzet is er geen urgentie, zonder urgentie geen besluit. Een
-          concrete schatting — ook als die niet precies klopt — is beter dan
+          concrete schatting, ook als die niet precies klopt, is beter dan
           een vaag gevoel van "dit kost ons geld".
         </p>
       </div>

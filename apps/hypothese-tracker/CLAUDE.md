@@ -4,15 +4,15 @@
 
 ## Wat dit appje is
 
-Een tool die tijdens een KPI-meeting een besluit vastlegt — inclusief de hypothese erachter en een nulmeting via screenshot — en op een afgesproken reviewmoment helpt te kijken of het besluit het verwachte effect had.
+Een tool die tijdens een KPI-meeting een besluit vastlegt (inclusief de hypothese erachter en een nulmeting via screenshot) en op een afgesproken reviewmoment helpt te kijken of het besluit het verwachte effect had.
 
 Het is de eerste burger van het *Decision OS*-concept en de meest uitgewerkte test van de centrale gedachte: *we vangen wat anders verdampt*.
 
 ## Waarom dit appje bestaat
 
-Dashboards tonen *de stand*. Maar besluitvorming bestaat uit veel meer: wie heeft het gezien, wat dachten ze ervan, wat is besloten, met welke verwachting, en wat kwam eruit. Twee weken later weet niemand meer precies waarom iets besloten is, laat staan of de aanname klopte.
+Dashboards tonen *de stand*. Maar besluitvorming bestaat uit veel meer: wie heeft het gezien, wat dachten ze ervan, wat is besloten, met welke verwachting en wat kwam eruit. Twee weken later weet niemand meer precies waarom iets besloten is, laat staan of de aanname klopte.
 
-De Hypothese-tracker vangt drie dingen op het moment van besluiten — actie, hypothese, nulmeting — en pingt later terug om te kijken of het klopte. Niet om mensen af te rekenen, maar om patronen zichtbaar te maken: waar zit ons MT er structureel naast, en wat zegt dat over hoe we de business begrijpen?
+De Hypothese-tracker vangt drie dingen op het moment van besluiten (actie, hypothese, nulmeting) en pingt later terug om te kijken of het klopte. Niet om mensen af te rekenen, maar om patronen zichtbaar te maken: waar zit ons MT er structureel naast en wat zegt dat over hoe we de business begrijpen?
 
 ## Doelgroep en context
 
@@ -61,7 +61,7 @@ KPI's worden door de gebruiker zelf aangemaakt zodra ze bij een besluit getypt w
   - **Bovenaan:** open besluiten waarvan de reviewdatum is bereikt of voorbij ("klaar voor review")
   - **Daaronder:** open besluiten met toekomstige reviewdatum, gesorteerd op nabijheid
   - **Onderaan:** gesloten besluiten, meest recent eerst
-- Per regel: titel, datum, KPI-labels (als chips), status-icoontje, en bij open: "nog X dagen" of "te reviewen"
+- Per regel: titel, datum, KPI-labels (als chips), status-icoontje en bij open: "nog X dagen" of "te reviewen"
 - Bij gesloten besluiten: klein icoontje voor oordeel (✓ klopte / ~ deels / ✗ niet)
 
 ### 2. Nieuw besluit (formulier)
@@ -91,7 +91,7 @@ Naast de gedeelde "wat appjes niet zijn"-lijst uit de root CLAUDE.md, specifiek 
 
 - Geen automatische analyse of vergelijking van de twee screenshots (het oog van de gebruiker doet het werk)
 - Geen Power BI-koppeling (komt later, MVP gebruikt screenshots)
-- Geen rapportage over "hoe goed besluit het MT" — wel een visueel patroon zichtbaar in de lijst, geen percentages
+- Geen rapportage over "hoe goed besluit het MT", wel een visueel patroon zichtbaar in de lijst, geen percentages
 
 ## Demo-data
 
@@ -107,7 +107,7 @@ Voorbeelden van besluit-titels: "Normtijd Frame Type 7 verhogen", "Minimum order
 
 Stel voordat je begint te bouwen een stack voor met korte motivatie. Vragen:
 - Web of desktop?
-- Welk framework, en waarom?
+- Welk framework en waarom?
 - Hoe slaan we screenshots op?
 - Hoe deployen we voor demo's (URL die Thijs kan delen)?
 

@@ -1,10 +1,10 @@
-# Datawijs met Thijs — gedeelde context voor Claude Code
+# Datawijs met Thijs: gedeelde context voor Claude Code
 
 Deze CLAUDE.md geldt voor de hele repo. Per appje is er een eigen CLAUDE.md in `apps/<naam>/` die hierop voortbouwt.
 
 ## Wat dit is
 
-Een verzameling experimentele appjes rond besluitvorming in de Nederlandse maakindustrie. Het overkoepelende werknaam-concept heet *Decision OS*: een schil rond Power BI-dashboards die de zachte kant van besluitvorming vangt — context, hypothesen, anekdotes, geleerde lessen.
+Een verzameling experimentele appjes rond besluitvorming in de Nederlandse maakindustrie. Het overkoepelende werknaam-concept heet *Decision OS*: een schil rond Power BI-dashboards die de zachte kant van besluitvorming vangt: context, hypothesen, anekdotes, geleerde lessen.
 
 Geen producten, geen startup. Experimenten met richting. Bedoeld als gesprekstof en bewijsmateriaal richting prospects.
 
@@ -20,7 +20,7 @@ Thijs Leufkens, data- en BI-specialist. 15+ jaar ervaring als senior data/BI spe
 
 ## Conceptuele basis
 
-De appjes leunen op *resource rationality* (Griffiths, Lieder & Griffiths). Mensen in maakbedrijven zijn niet irrationeel — ze opereren onder cognitieve kostendruk. Het reconstrueren van context rond eerdere besluiten, het expliciet maken van hypotheses, het vangen van anekdotes naast cijfers: dat kost moeite en gebeurt daarom niet. De appjes verlagen die kosten tot bijna nul, zodat bestaande heuristieken beter werken.
+De appjes leunen op *resource rationality* (Griffiths, Lieder & Griffiths). Mensen in maakbedrijven zijn niet irrationeel: ze opereren onder cognitieve kostendruk. Het reconstrueren van context rond eerdere besluiten, het expliciet maken van hypotheses, het vangen van anekdotes naast cijfers: dat kost moeite en gebeurt daarom niet. De appjes verlagen die kosten tot bijna nul, zodat bestaande heuristieken beter werken.
 
 Centrale gedachte: *we vangen wat anders verdampt*.
 
@@ -32,14 +32,14 @@ Geldt voor alle UI-teksten, README's, commit messages en code-comments:
 - Rustig, zakelijk, direct
 - Geen jargon, geen marketingtaal, geen "AI-powered", geen "revolutionary"
 - Geen emoji's in UI of code-comments (in README's heel spaarzaam, max 1 per document)
-- Em-dashes (—) alleen functioneel, niet als komma-vervanger
+- Geen em-dashes en geen komma voor "en": een komma of dubbele punt volstaat
 - Datums in Nederlands formaat (10 april 2026, niet 04/10/2026 of 2026-04-10 in UI)
 - Bedragen in euro's met Nederlands formaat (€ 1.250,50)
 
 ## Visuele stijl
 
 - Rustig, professioneel, geen speelgoed-look
-- Referentie: Linear, Notion, Things — niet Bootstrap-default
+- Referentie: Linear, Notion, Things, niet Bootstrap-default
 - Veel witruimte, weinig kleur, duidelijke hiërarchie
 - Moet er presentabel uitzien zodat appjes in een prospect-gesprek getoond kunnen worden
 
@@ -47,7 +47,7 @@ Geldt voor alle UI-teksten, README's, commit messages en code-comments:
 
 Belangrijk om expliciet te benoemen, want hier sneuvelen veel van dit soort tools:
 
-- Geen managementsystemen — het zijn logboeken en hulpmiddelen
+- Geen managementsystemen: het zijn logboeken en hulpmiddelen
 - Geen workflow-engines met goedkeuringen en escalaties
 - Geen integraties tenzij expliciet nodig (en dan zo dun mogelijk)
 - Geen multi-user, geen accounts, geen login (tenzij een specifiek appje dat echt nodig heeft)
@@ -58,7 +58,7 @@ Vuistregel: als je twijfelt of een feature erbij moet, is het antwoord nee.
 
 ## Demo-data
 
-Alle appjes moeten gedemonstreerd kunnen worden zonder leeg te ogen. Verzin een fictief maakbedrijf en gebruik dat consistent door alle appjes heen. Voorstel: **Van Houten Metaal**, een fictief familiebedrijf in Eindhoven dat metaalbewerking doet voor de machinebouw, ~120 medewerkers. Gebruik fictieve productnamen (bijv. "Frame Type 7", "Bracket A12"), fictieve KPI's met realistische waardes, en fictieve namen voor mensen ("Peter de Vries", "Anja Hendriks").
+Alle appjes moeten gedemonstreerd kunnen worden zonder leeg te ogen. Verzin een fictief maakbedrijf en gebruik dat consistent door alle appjes heen. Voorstel: **Van Houten Metaal**, een fictief familiebedrijf in Eindhoven dat metaalbewerking doet voor de machinebouw, ~120 medewerkers. Gebruik fictieve productnamen (bijv. "Frame Type 7", "Bracket A12"), fictieve KPI's met realistische waardes en fictieve namen voor mensen ("Peter de Vries", "Anja Hendriks").
 
 Geen echte klantnamen, geen echte cijfers, geen herkenbare details uit Thijs' werkervaring.
 
@@ -88,7 +88,7 @@ Stack is per appje vrij. Kaders die voor alle appjes gelden:
 - Eenvoud > volledigheid
 - Lokaal draaien moet werken; deploybaar voor demo's (Vercel, Netlify, of simpele VPS)
 - Geen build-pipelines die uit de hand lopen
-- Geen CI/CD vanaf dag één — pas toevoegen als er tests zijn die er iets aan hebben
+- Geen CI/CD vanaf dag één: pas toevoegen als er tests zijn die er iets aan hebben
 
 Bij twijfel over de stack: stel een voorstel met motivatie voor (max 1 A4) en wacht op akkoord voordat je begint te bouwen.
 

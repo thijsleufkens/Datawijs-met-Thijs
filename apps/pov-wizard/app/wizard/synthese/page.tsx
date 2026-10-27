@@ -46,7 +46,7 @@ export default function SynthesePagina() {
     <div>
       <div className="mb-8">
         <p className="text-xs font-medium text-[var(--color-accent)] uppercase tracking-wider mb-1">
-          Stap 5 — Synthese
+          Stap 5: Synthese
         </p>
         <h2 className="text-xl font-semibold tracking-tight">
           Jouw Data POV in één zin

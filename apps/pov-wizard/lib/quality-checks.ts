@@ -42,7 +42,7 @@ export function berekenKwaliteit(
       label: "Bevat een kwantificeerbare impact",
       hint: heeftKwantificeerbarImpact(draft.inzet.impact)
         ? undefined
-        : "Je impact is vaag — kun je er een bedrag of percentage aan hangen?",
+        : "Je impact is vaag. Kun je er een bedrag of percentage aan hangen?",
     },
     {
       geslaagd: heeftHorizon(draft),
