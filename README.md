@@ -14,7 +14,7 @@ Het overkoepelende werknaam-concept is *Decision OS*: een schil rond Power BI-da
 
 | App | Wat het doet | Status |
 |---|---|---|
-| [hypothese-tracker](apps/hypothese-tracker/) | Logt besluiten met hypothese en nulmeting en helpt later kijken of het klopte | Geparkeerd, zie [LAB-004 in Het Lab](https://datawijs.nl/het-lab/lab-004/). [Probeer de demo](https://datawijs.nl/het-lab/hypothese-tracker/) |
+| [hypothese-tracker](apps/hypothese-tracker/) | Logt besluiten met hypothese en nulmeting en helpt later kijken of het klopte | Geparkeerd, zie [LAB-003 in Het Lab](https://datawijs.nl/het-lab/lab-003/). [Probeer de demo](https://datawijs.nl/het-lab/hypothese-tracker/) |
 | [pov-wizard](apps/pov-wizard/) | Vijf vragen van een afwijking in een KPI naar één scherpe zin | Klaar als experiment. [Probeer het als werkblad](https://datawijs.nl/gereedschap/van-afwijking-naar-mening/invullen/) |
 
 Meer volgt naarmate ideeën uit mijn werk concreet genoeg worden om te bouwen.
